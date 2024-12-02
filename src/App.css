@@ -1,38 +1,170 @@
-.App {
+/* General App Container */
+.app-container {
+  font-family: 'Calibri', sans-serif;
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 20px;
+  background: #f7f9fc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* App Header */
+h2 {
   text-align: center;
+  font-size: 2rem;
+  color: #00274d;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h3 {
+  font-size: 1.5rem;
+  color: #00274d;
+  margin-top: 20px;
+  text-decoration: underline;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* File Upload Inputs */
+label {
+  font-size: 1rem;
+  color: #00274d;
+  display: block;
+  margin-bottom: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+input[type="file"] {
+  display: inline-block;
+  font-size: 0.9rem;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  background: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="file"]:hover {
+  background: #f0f8ff;
+  border-color: #00274d;
+  cursor: pointer;
+}
+
+/* Buttons */
+button {
+  display: inline-block;
+  font-size: 1rem;
   color: white;
+  background: #00274d;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background: #001a33;
+  transform: scale(1.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Resume Section Buttons */
+button + button {
+  margin-left: 10px;
+}
+
+button.active {
+  background: #001a33;
+  font-weight: bold;
+}
+
+/* Content Display Areas */
+pre {
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  color: #00274d;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+/* Menu Buttons Section */
+.app-container div {
+  margin-bottom: 20px;
+}
+
+div button {
+  margin: 5px;
+}
+
+/* Loading Spinner Style */
+button:disabled::after {
+  content: "⏳";
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+/* Reformatted Resume Section */
+.reformatted-resume-container {
+  margin-top: 20px;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.reformatted-resume-container h3 {
+  color: #00274d;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 15px;
   }
-  to {
-    transform: rotate(360deg);
+
+  h2 {
+    font-size: 1.8rem;
   }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  input[type="file"] {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+
+  pre {
+    font-size: 0.8rem;
+  }
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #00274d;
 }
